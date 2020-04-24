@@ -1,70 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-* {
-  font-size: 16px;
-  margin: 0px;
-}
-label {
-  /* border: 1px solid black;
-  padding: 10px; */
-}
-textarea {
-  width: 100%;
-  height: 100px;
-}
-button {
-  padding: 10px;
-  background-color: lightblue;
-  border: 1px solid lightblue;
-}
-input {
-  padding: 6px;
-  font-size: 16px;
-}
-
-input, textarea, button {
-  border-radius: 5px;
-}
-
-.main {
-    margin: 20px;
-    padding: 10px;
-}
-</style>
+    <meta charset="utf-8">
+    <title>註冊個人帳戶</title>
+    <link rel="stylesheet" type="text/css" href="form.css"/>
 </head>
 <body>
 <div class="main">
     <form>
         <fieldset>
-          <legend>個人資料</legend>
-        <label for="username">帳號:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="pwd">密碼:</label><br>
-        <input type="password" id="pwd" name="pwd"><br/>
-      
-        <label>血型</label><br>
-      <select id="cars" name="cars">
-        <option value="A">A</option>
-        <option value="B">B</option>
-        <option value="AB">AB</option>
-        <option value="O">O</option>
-      </select><br/>
-        <label for="birthday">生日:</label><br/>
-        <input type="date" id="birthday" name="birthday">
-        <br/>
-        <label>留言:</label><br/>
-      <textarea name="message">
-      
-      </textarea>
-      <br/><br/>
-          <button>註冊</button><br/><br/>
-      <input type="checkbox" name="subscribe" value="subscribe">
-      <label>訂閱電子報:</label>
+            <legend>請填寫以下問題</legend>
+            <label for="name">姓名(可填暱稱):</label>
+            <input type="text" id="name" name="name"><p>
+            <label for="password">密碼:</label>
+            <input type="password" id="password" name="password"><p>
+            <label for="picture">個人照片:</label>
+            <input type="file" name="picture"/><p>
+            <label for="E-mail">E-mail:</label>
+            <input type="text" id="E-mail" name="E-mail"><p>
+            <label for="gender">性別:</label>
+            <input type="text" id="gender" name="gender"><p>
+            <label for="blood type">血型:</label>
+            <input type="text" id="blood type" name="blood type"><p>
+            <label for="birthday">生日:</label>
+            <input type="date" id="birthday" name="birthday"><p>
+            <label for="mode">請問你喜歡用何種方式上課?</label><br>
+            <select id="mode" name="mode">
+                <option value="Select">請選擇</option>
+                <option value="Face to Face">實體面對面課堂</option>
+                <option value="Online">線上直播教學</option>
+                <option value="NO online">非即時性線上教學</option>
+            </select><p>
+            <label>為什麼喜歡此方式?</label><br>
+            <textarea name="message"></textarea>
+            <p>
+            <label>留言:</label><br>
+            <textarea name="message"></textarea>
+            <p>
+                <input type="checkbox" name="subscribe" value="subscribe">
+                <label>訂閱電子報</label><p>
+                <input type="checkbox" name="subscribe" value="subscribe">
+                <label>在此告知你所填寫的資料僅供資料統計用並無其他商業用途(同意請勾選)</label><p>
+                <button>完成送出</button> <button>取消重填</button>
         </fieldset>
-      </form>      
+    </form>
 </div>
-
 </body>
 </html>
