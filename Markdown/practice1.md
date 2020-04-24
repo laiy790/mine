@@ -1,35 +1,70 @@
-一级標題
-=======
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  font-size: 16px;
+  margin: 0px;
+}
+label {
+  /* border: 1px solid black;
+  padding: 10px; */
+}
+textarea {
+  width: 100%;
+  height: 100px;
+}
+button {
+  padding: 10px;
+  background-color: lightblue;
+  border: 1px solid lightblue;
+}
+input {
+  padding: 6px;
+  font-size: 16px;
+}
 
-## 二级標題
+input, textarea, button {
+  border-radius: 5px;
+}
 
-段落以空白行分隔。
+.main {
+    margin: 20px;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+<div class="main">
+    <form>
+        <fieldset>
+          <legend>個人資料</legend>
+        <label for="username">帳號:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="pwd">密碼:</label><br>
+        <input type="password" id="pwd" name="pwd"><br/>
+      
+        <label>血型</label><br>
+      <select id="cars" name="cars">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="AB">AB</option>
+        <option value="O">O</option>
+      </select><br/>
+        <label for="birthday">生日:</label><br/>
+        <input type="date" id="birthday" name="birthday">
+        <br/>
+        <label>留言:</label><br/>
+      <textarea name="message">
+      
+      </textarea>
+      <br/><br/>
+          <button>註冊</button><br/><br/>
+      <input type="checkbox" name="subscribe" value="subscribe">
+      <label>訂閱電子報:</label>
+        </fieldset>
+      </form>      
+</div>
 
-行末兩個空格  産生斷行。
-
-文本屬性：_斜體_、
-**粗體**、`等寬字型Monospace`。
-
-水平線：
-
----
-
-列表：
-
-  * 張三
-  * 李四
-  * 王二
-
-編號列表：
-
-  1. 不論
-  2. 三七
-  3. 二十一
-
-[連結](http://example.com)
-
-![圖](https://i.epochtimes.com/assets/uploads/2019/01/c0BQqO0.jpeg"icon")
-
-> Markdown使用電郵用字元「>」來引用。
-
-行間<abbr title="Hypertext Markup Language">HTML</abbr>亦受支援。
+</body>
+</html>
