@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -19,7 +19,17 @@
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.dropdown .new {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown .me {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -30,7 +40,7 @@
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .new {
   background-color: #2c07b1;
 }
 
@@ -43,6 +53,7 @@
   z-index: 1;
 }
 
+
 .dropdown-content a {
   float: none;
   color: black;
@@ -52,9 +63,11 @@
   text-align: left;
 }
 
+
 .dropdown-content a:hover {
   background-color: rgba(112, 216, 248, 0.52);
 }
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -64,6 +77,10 @@
   background-color: rgb(255, 255, 255);
   
   padding: 0.1px;
+}
+.back{
+  background-color: rgba(255, 255, 255, 0.363);
+  text-align: end;
 }
 
 body {
@@ -96,12 +113,10 @@ body {
   transition: 0.3s;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+.sidenav a:hover {  color: #f1f1f1;}
 
-.sidenav .closebtn {
-  
+.sidenav .closebtn 
+{
   position: absolute;
   top: 10px;
   right: 10px;
@@ -116,7 +131,7 @@ body {
 </style>
 </head>
 
-<body>
+<body onload="showTime()">
 <span style="font-size:30px;cursor:pointer;color: rgb(255, 255, 255);" onclick="openNav()">&#9776; CLICK ME</span>
 
 <script>
@@ -127,7 +142,15 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+function showTime() {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    document.getElementById('time').innerHTML = h+":"+m+":"+s;
+    setTimeout(showTime,1000);}
 </script>
+
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">(ノ▼Д▼)ノ</a>&times;</a>
@@ -136,26 +159,41 @@ function closeNav() {
   <a href="https://www.facebook.com/">Facebook</a>
   <a href="https://www.sciencedirect.com/">Science Direct</a>
   <a href="http://ecampus.nqu.edu.tw/eCampus3P/Learn/LoginPage2/product_login.aspx">eCampus</a>
+  <a href="http://select1.nqu.edu.tw/kmkuas/index_sky.html">校務系統</a>
 </div>
 
 <div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div> 
+  <a href="https://www.google.com/">Google</a>
+<div class="dropdown">
+  <button class="new">NEWS <i class="fa fa-caret-down"></i></button>
+<div class="dropdown-content">
+  <a href="https://today.line.me/tw/v2/tab/top?gclsrc=aw.ds&gclsrc=aw.ds&gclid=CjwKCAjwqpP2BRBTEiwAfpiD--561MzTpcsjZEBlMex2pLE-m8DxYm-zbSn46WSeBaKoptthNMTMMhoC3-kQAvD_BwE">Line Today</a>
+  <a href="https://news.google.com/">Google News</a>
+  <a href="https://tw.news.yahoo.com/">Yahoo News</a>
 </div>
+</div>
+<div class="dropdown">
+<button class="new">About Me <i class="fa fa-caret-down"></i></button>
+<div class="dropdown-content">
+    <a href="https://laiy790.github.io/mine/web02.html">FAMILY</a>
+    <a href="https://laiy790.github.io/mine/web03.html">INTEREST</a>
+  
+
+</div>
+</div>
+</div>
+
+
+
 <p class="blok"></p>
+<textarea cols="50" rows="5">(這只是個裝飾)</textarea>
+<!--可以打字但沒甚麼用處的地方-->
+
+
+
 
 
 
 </body>
-
+<footer class="back";><div id="time";></div></footer>
 </html> 
